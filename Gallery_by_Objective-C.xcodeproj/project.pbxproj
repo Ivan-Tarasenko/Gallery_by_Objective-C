@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		1A51128B2ADB8282009AD86A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51128A2ADB8282009AD86A /* AppDelegate.m */; };
 		1A51128E2ADB8282009AD86A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51128D2ADB8282009AD86A /* SceneDelegate.m */; };
-		1A5112912ADB8282009AD86A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112902ADB8282009AD86A /* ViewController.m */; };
-		1A5112942ADB8282009AD86A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5112922ADB8282009AD86A /* Main.storyboard */; };
+		1A5112912ADB8282009AD86A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112902ADB8282009AD86A /* MainViewController.m */; };
 		1A5112962ADB8284009AD86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5112952ADB8284009AD86A /* Assets.xcassets */; };
 		1A5112992ADB8284009AD86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5112972ADB8284009AD86A /* LaunchScreen.storyboard */; };
-		1A51129C2ADB8284009AD86A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51129B2ADB8284009AD86A /* main.m */; };
+		1A5112A32ADB8600009AD86A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112A22ADB8600009AD86A /* main.m */; };
+		1A5112DA2ADBBA91009AD86A /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112D92ADBBA91009AD86A /* CollectionViewCell.m */; };
+		1A5112DD2ADBCA24009AD86A /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112DC2ADBCA24009AD86A /* CollectionViewDataSource.m */; };
+		1A5112E02ADBCD6B009AD86A /* CollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112DF2ADBCD6B009AD86A /* CollectionViewDelegate.m */; };
+		1A5112E32ADBCF6F009AD86A /* CollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112E22ADBCF6F009AD86A /* CollectionViewFlowLayout.m */; };
+		1A5112EC2ADBD69D009AD86A /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112EB2ADBD69D009AD86A /* CollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +26,22 @@
 		1A51128A2ADB8282009AD86A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1A51128C2ADB8282009AD86A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		1A51128D2ADB8282009AD86A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		1A51128F2ADB8282009AD86A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A5112902ADB8282009AD86A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1A5112932ADB8282009AD86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A51128F2ADB8282009AD86A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1A5112902ADB8282009AD86A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1A5112952ADB8284009AD86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A5112982ADB8284009AD86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A51129A2ADB8284009AD86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A51129B2ADB8284009AD86A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A5112A22ADB8600009AD86A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A5112D82ADBBA91009AD86A /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		1A5112D92ADBBA91009AD86A /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		1A5112DB2ADBCA24009AD86A /* CollectionViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
+		1A5112DC2ADBCA24009AD86A /* CollectionViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
+		1A5112DE2ADBCD6B009AD86A /* CollectionViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDelegate.h; sourceTree = "<group>"; };
+		1A5112DF2ADBCD6B009AD86A /* CollectionViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDelegate.m; sourceTree = "<group>"; };
+		1A5112E12ADBCF6F009AD86A /* CollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		1A5112E22ADBCF6F009AD86A /* CollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		1A5112EA2ADBD69D009AD86A /* CollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
+		1A5112EB2ADBD69D009AD86A /* CollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +74,140 @@
 		1A5112882ADB8282009AD86A /* Gallery_by_Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				1A5112C92ADBA48B009AD86A /* Applacation */,
+				1A5112CB2ADBA4CB009AD86A /* Resouces */,
+				1A5112CC2ADBA4D9009AD86A /* Screens */,
+				1A5112CA2ADBA4AD009AD86A /* SupportingFiles */,
+			);
+			path = "Gallery_by_Objective-C";
+			sourceTree = "<group>";
+		};
+		1A5112C92ADBA48B009AD86A /* Applacation */ = {
+			isa = PBXGroup;
+			children = (
 				1A5112892ADB8282009AD86A /* AppDelegate.h */,
 				1A51128A2ADB8282009AD86A /* AppDelegate.m */,
 				1A51128C2ADB8282009AD86A /* SceneDelegate.h */,
 				1A51128D2ADB8282009AD86A /* SceneDelegate.m */,
-				1A51128F2ADB8282009AD86A /* ViewController.h */,
-				1A5112902ADB8282009AD86A /* ViewController.m */,
-				1A5112922ADB8282009AD86A /* Main.storyboard */,
-				1A5112952ADB8284009AD86A /* Assets.xcassets */,
+			);
+			path = Applacation;
+			sourceTree = "<group>";
+		};
+		1A5112CA2ADBA4AD009AD86A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				1A5112972ADB8284009AD86A /* LaunchScreen.storyboard */,
 				1A51129A2ADB8284009AD86A /* Info.plist */,
-				1A51129B2ADB8284009AD86A /* main.m */,
+				1A5112A22ADB8600009AD86A /* main.m */,
 			);
-			path = "Gallery_by_Objective-C";
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1A5112CB2ADBA4CB009AD86A /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112952ADB8284009AD86A /* Assets.xcassets */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		1A5112CC2ADBA4D9009AD86A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112CD2ADBA4E3009AD86A /* MainScreen */,
+				1A5112CE2ADBA4F2009AD86A /* DetailScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1A5112CD2ADBA4E3009AD86A /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112D02ADBA68B009AD86A /* View */,
+				1A5112CF2ADBA67A009AD86A /* ViewConreoller */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1A5112CE2ADBA4F2009AD86A /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		1A5112CF2ADBA67A009AD86A /* ViewConreoller */ = {
+			isa = PBXGroup;
+			children = (
+				1A51128F2ADB8282009AD86A /* MainViewController.h */,
+				1A5112902ADB8282009AD86A /* MainViewController.m */,
+			);
+			path = ViewConreoller;
+			sourceTree = "<group>";
+		};
+		1A5112D02ADBA68B009AD86A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112D12ADBA6A7009AD86A /* CollectionView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A5112D12ADBA6A7009AD86A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112E92ADBD661009AD86A /* Collection */,
+				1A5112E52ADBD607009AD86A /* CollectionCell */,
+				1A5112E62ADBD621009AD86A /* CollectionDataSource */,
+				1A5112E72ADBD635009AD86A /* CollectionDelegate */,
+				1A5112E82ADBD64A009AD86A /* CollectionLayout */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		1A5112E52ADBD607009AD86A /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112D82ADBBA91009AD86A /* CollectionViewCell.h */,
+				1A5112D92ADBBA91009AD86A /* CollectionViewCell.m */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		1A5112E62ADBD621009AD86A /* CollectionDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112DB2ADBCA24009AD86A /* CollectionViewDataSource.h */,
+				1A5112DC2ADBCA24009AD86A /* CollectionViewDataSource.m */,
+			);
+			path = CollectionDataSource;
+			sourceTree = "<group>";
+		};
+		1A5112E72ADBD635009AD86A /* CollectionDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112DE2ADBCD6B009AD86A /* CollectionViewDelegate.h */,
+				1A5112DF2ADBCD6B009AD86A /* CollectionViewDelegate.m */,
+			);
+			path = CollectionDelegate;
+			sourceTree = "<group>";
+		};
+		1A5112E82ADBD64A009AD86A /* CollectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112E12ADBCF6F009AD86A /* CollectionViewFlowLayout.h */,
+				1A5112E22ADBCF6F009AD86A /* CollectionViewFlowLayout.m */,
+			);
+			path = CollectionLayout;
+			sourceTree = "<group>";
+		};
+		1A5112E92ADBD661009AD86A /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				1A5112EA2ADBD69D009AD86A /* CollectionView.h */,
+				1A5112EB2ADBD69D009AD86A /* CollectionView.m */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +269,6 @@
 			files = (
 				1A5112992ADB8284009AD86A /* LaunchScreen.storyboard in Resources */,
 				1A5112962ADB8284009AD86A /* Assets.xcassets in Resources */,
-				1A5112942ADB8282009AD86A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5112912ADB8282009AD86A /* ViewController.m in Sources */,
+				1A5112EC2ADBD69D009AD86A /* CollectionView.m in Sources */,
+				1A5112912ADB8282009AD86A /* MainViewController.m in Sources */,
+				1A5112E02ADBCD6B009AD86A /* CollectionViewDelegate.m in Sources */,
+				1A5112E32ADBCF6F009AD86A /* CollectionViewFlowLayout.m in Sources */,
+				1A5112DD2ADBCA24009AD86A /* CollectionViewDataSource.m in Sources */,
+				1A5112DA2ADBBA91009AD86A /* CollectionViewCell.m in Sources */,
 				1A51128B2ADB8282009AD86A /* AppDelegate.m in Sources */,
-				1A51129C2ADB8284009AD86A /* main.m in Sources */,
+				1A5112A32ADB8600009AD86A /* main.m in Sources */,
 				1A51128E2ADB8282009AD86A /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,14 +294,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A5112922ADB8282009AD86A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A5112932ADB8282009AD86A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A5112972ADB8284009AD86A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -227,6 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -282,6 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -299,10 +431,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gallery_by_Objective-C/Info.plist";
+				INFOPLIST_FILE = "Gallery_by_Objective-C/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,10 +456,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gallery_by_Objective-C/Info.plist";
+				INFOPLIST_FILE = "Gallery_by_Objective-C/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

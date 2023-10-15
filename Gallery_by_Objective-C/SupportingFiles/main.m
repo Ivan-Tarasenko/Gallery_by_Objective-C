@@ -1,14 +1,15 @@
 //
 //  main.m
-//  Gallery_by_Objective-C
+//  Test_Objective-C
 //
-//  Created by Иван Тарасенко on 15.10.2023.
+//  Created by Иван Тарасенко on 12.10.2023.
 //
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
+    
     NSString * appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
