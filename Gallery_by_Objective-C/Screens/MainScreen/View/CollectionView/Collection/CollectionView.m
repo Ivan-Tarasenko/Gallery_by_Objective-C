@@ -16,11 +16,7 @@
     self = [super initWithFrame:frame collectionViewLayout:self.layout];
     
     if (self) {
-       
-        
-
         [self registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"CustomCell"];
-        self.backgroundColor = [UIColor systemGray2Color];
     }
     
     return self;

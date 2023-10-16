@@ -6,6 +6,7 @@
 //
 
 #import "CollectionViewCell.h"
+#import <SDWebImage/SDWebImage.h>
 
 @implementation CollectionViewCell
 
@@ -13,15 +14,41 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        [self setupLabel];
+        [self addedSubview];
+        [self makeConstrains];
+        [self setContentView];
     }
     
     return self;
 }
 
-- (void)setupLabel {
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
-    [self.contentView addSubview: _titleLabel];
+- (void)addedSubview {
+    self.imageView = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.imageView];
 }
+
+- (void)makeConstrains {
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [self.imageView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor],
+        [self.imageView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor],
+        [self.imageView.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor],
+        [self.imageView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor]
+    ]];
+}
+
+- (void)setContentView {
+    self.contentView.layer.borderWidth = 1;
+}
+
+- (void)setImage:(NSString *) urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    if (url) {
+        [self.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    }
+}
+
 
 @end

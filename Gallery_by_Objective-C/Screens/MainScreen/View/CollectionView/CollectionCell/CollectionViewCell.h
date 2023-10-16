@@ -11,7 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) UILabel * titleLabel;
+@property (strong, nonatomic) UIImageView * imageView;
+
+- (void)addedSubview;
+- (void)makeConstrains;
+- (void)setContentView;
+- (void)setImage:(NSString *) url;
 
 @end
 

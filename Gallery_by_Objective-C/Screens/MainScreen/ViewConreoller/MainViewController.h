@@ -18,5 +18,9 @@
 @property (strong, nonatomic) CollectionViewDelegate * delegate;
 @property (strong, nonatomic) CollectionViewFlowLayout * layout;
 
+- (void)initializingObjects;
+- (void)setupDelegates;
+- (void)setupCollectionView;
+
 @end
 
