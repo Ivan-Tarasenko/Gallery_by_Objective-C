@@ -10,13 +10,15 @@
 @implementation CollectionViewDataSource
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1000;
+    return self.images.count;
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCell" forIndexPath:indexPath];
     
-    [cell setImage:@"https://www.example.com/image.jpg"];
+    NSString *imageURL = self.images[indexPath.row];
+    
+    [cell setImage: imageURL];
     
     return cell;
 }

@@ -19,5 +19,18 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Патамуша нада</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>pixabay.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

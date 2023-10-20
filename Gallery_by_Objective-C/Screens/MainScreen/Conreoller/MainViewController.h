@@ -10,6 +10,8 @@
 #import "CollectionViewDelegate.h"
 #import "CollectionViewFlowLayout.h"
 #import "CollectionView.h"
+#import "CollectionViewCell.h"
+#import "MainViewModel.h"
 
 @interface MainViewController : UIViewController
 
@@ -17,6 +19,7 @@
 @property (strong, nonatomic) CollectionViewDataSource * dataSource;
 @property (strong, nonatomic) CollectionViewDelegate * delegate;
 @property (strong, nonatomic) CollectionViewFlowLayout * layout;
+@property (strong, nonatomic) MainViewModel * viewNodel;
 
 - (void)initializingObjects;
 - (void)setupDelegates;

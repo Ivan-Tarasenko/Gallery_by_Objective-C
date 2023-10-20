@@ -6,15 +6,16 @@
 //
 
 #import "MainViewController.h"
-#import "CollectionViewCell.h"
 
-@interface MainViewController ()
+@interface MainViewController () {
+    
+    NSMutableArray *images;
+}
 
 
 @end
 
 @implementation MainViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +24,7 @@
     [self setupDelegates];
     [self setupCollectionView];
     
+    [self fetchData];
     
     self.title = @"Navigation Controller";
     
@@ -33,7 +35,21 @@
     self.delegate = [[CollectionViewDelegate alloc] init];
     self.layout = [[CollectionViewFlowLayout alloc] init];
     self.collectionView = [[CollectionView alloc] init];
+    self.viewNodel = [[MainViewModel alloc] init];
+}
 
+- (void)fetchData {
+    [self.viewNodel loadData:^(NSArray<NSArray *> *images, NSError *error) {
+        
+        if (images) {
+//            NSLog(@"%@", images[1]);
+            self.dataSource.images = images[0];
+            [self.collectionView reloadData];
+            
+        } else {
+            NSLog(@"Ошибка при загрузке данных: %@", error.localizedDescription);
+        }
+    }];
 }
 
 - (void)setupDelegates {
