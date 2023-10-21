@@ -12,6 +12,7 @@
 #import "CollectionView.h"
 #import "CollectionViewCell.h"
 #import "MainViewModel.h"
+#import "DetailViewController.h"
 
 @interface MainViewController : UIViewController
 
@@ -21,9 +22,13 @@
 @property (strong, nonatomic) CollectionViewFlowLayout * layout;
 @property (strong, nonatomic) MainViewModel * viewNodel;
 
+@property (strong, nonatomic) NSArray * largeImages;
+
 - (void)initializingObjects;
+- (void)fetchData;
 - (void)setupDelegates;
 - (void)setupCollectionView;
+- (void)transitionOnDetailView;
 
 @end
 

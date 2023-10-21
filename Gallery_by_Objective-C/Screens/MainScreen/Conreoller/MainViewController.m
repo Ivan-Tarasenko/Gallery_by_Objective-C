@@ -7,12 +7,8 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController () {
+@interface MainViewController ()
     
-    NSMutableArray *images;
-}
-
-
 @end
 
 @implementation MainViewController
@@ -25,6 +21,8 @@
     [self setupCollectionView];
     
     [self fetchData];
+    
+    [self transitionOnDetailView];
     
     self.title = @"Navigation Controller";
     
@@ -42,8 +40,9 @@
     [self.viewNodel loadData:^(NSArray<NSArray *> *images, NSError *error) {
         
         if (images) {
-//            NSLog(@"%@", images[1]);
             self.dataSource.images = images[0];
+            self.largeImages = images[1];
+            
             [self.collectionView reloadData];
             
         } else {
@@ -61,6 +60,23 @@
 - (void)setupCollectionView {
     self.collectionView.frame = self.view.bounds;
     [self.view addSubview: _collectionView];  
+}
+
+- (void)transitionOnDetailView {
+    __weak typeof(self) weakSelf = self;
+
+      self.delegate.cellSelectionBlock = ^(NSIndexPath *indexPath) {
+          
+          __strong typeof(weakSelf) strongSelf = weakSelf;
+          
+          if (strongSelf) {
+              DetailViewController *detailVC = [[DetailViewController alloc] init];
+
+              detailVC.largeImageURL = strongSelf.largeImages[indexPath.row];
+
+              [strongSelf.navigationController pushViewController:detailVC animated:YES];
+          }
+      };
 }
 
 @end

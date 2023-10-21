@@ -9,4 +9,12 @@
 
 @implementation CollectionViewDelegate
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"ячейка номер %ld", (long)indexPath.item);
+
+    if (self.cellSelectionBlock) {
+            self.cellSelectionBlock(indexPath);
+        }
+}
+
 @end
