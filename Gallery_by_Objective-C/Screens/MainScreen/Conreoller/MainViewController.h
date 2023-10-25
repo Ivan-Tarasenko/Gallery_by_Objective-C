@@ -20,15 +20,22 @@
 @property (strong, nonatomic) CollectionViewDataSource * dataSource;
 @property (strong, nonatomic) CollectionViewDelegate * delegate;
 @property (strong, nonatomic) CollectionViewFlowLayout * layout;
-@property (strong, nonatomic) MainViewModel * viewNodel;
+@property (strong, nonatomic) MainViewModel * viewModel;
+@property (strong, nonatomic) UIActivityIndicatorView * activityIndicator;
 
-@property (strong, nonatomic) NSArray * largeImages;
+@property (strong, nonatomic) NSMutableArray * largeImages;
+@property (strong, nonatomic) NSMutableArray * testImages;
+
+@property (strong, nonatomic) NSString * topic;
+@property (assign, nonatomic) NSInteger page;
 
 - (void)initializingObjects;
 - (void)fetchData;
 - (void)setupDelegates;
 - (void)setupCollectionView;
 - (void)transitionOnDetailView;
+- (void)setupActivityIndicator;
+- (void)stopActivityIndicator;
 
 @end
 

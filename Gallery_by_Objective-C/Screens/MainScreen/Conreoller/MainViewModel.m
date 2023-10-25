@@ -9,14 +9,13 @@
 
 @implementation MainViewModel
 
-NSString *keyAPI = @"37778827-6de53276e5604625d8e6df5a6";
-NSString *topic = @"natur";
-NSString *page = @"1";
-NSString *imageType = @"photo";
-
-- (void)loadData:(void (^)(NSArray<NSArray *> *images, NSError *error))completion {
+- (void)loadDataWithPage:(NSInteger)page andTopic:(NSString *)topic completion:(void (^)(NSArray<NSArray *> *images, NSError *error))completion {
+    
+    NSString *keyAPI = @"37778827-6de53276e5604625d8e6df5a6";
+    NSString *imageType = @"photo";
     NSString *URLString = @"https://pixabay.com/api/";
-    NSDictionary *parameters = @{@"key": keyAPI , @"q": topic, @"page": page, @"image_type":imageType};
+    
+    NSDictionary *parameters = @{@"key": keyAPI , @"q": topic, @"page": @(page), @"image_type":imageType};
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 <UICollectionViewDelegate>
 
 @property (copy, nonatomic) void (^cellSelectionBlock)(NSIndexPath *indexPath);
+@property (copy, nonatomic) void (^onScrollAction)(void);
 
 @end
 

@@ -12,14 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainViewModel : NSObject
 
-@property (strong, nonatomic) NSString *keyAPI;
-@property (strong, nonatomic) NSString *topic;
-@property (strong, nonatomic) NSString *page;
-@property (strong, nonatomic) NSString *imageType;
-
-@property (strong, nonatomic) NSMutableArray *images;
-
-- (void)loadData:(void (^)())completion;
+- (void)loadDataWithPage:(NSInteger)page andTopic:(NSString *)topic completion:(void (^)(NSArray<NSArray *> *images, NSError *error))completion;
 @end
 
 NS_ASSUME_NONNULL_END

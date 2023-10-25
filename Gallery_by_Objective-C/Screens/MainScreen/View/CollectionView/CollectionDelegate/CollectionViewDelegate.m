@@ -10,11 +10,26 @@
 @implementation CollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ячейка номер %ld", (long)indexPath.item);
-
+    
     if (self.cellSelectionBlock) {
-            self.cellSelectionBlock(indexPath);
+        self.cellSelectionBlock(indexPath);
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat contentOffsetY = scrollView.contentOffset.y;
+    CGFloat contentHeight = scrollView.contentSize.height;
+    CGFloat scrollViewHeight = scrollView.frame.size.height;
+    
+    if (contentOffsetY > 0 && (contentOffsetY + scrollViewHeight >= contentHeight)) {
+        
+        if (self.onScrollAction) {
+            self.onScrollAction();
         }
+        
+    }
+    
 }
 
 @end

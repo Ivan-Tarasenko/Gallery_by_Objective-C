@@ -9,14 +9,22 @@
 
 @implementation CollectionViewDataSource
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.webImagesURL = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.images.count;
+    return self.webImagesURL.count;
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCell" forIndexPath:indexPath];
     
-    NSString *imageURL = self.images[indexPath.row];
+    NSString *imageURL = self.webImagesURL[indexPath.row];
     
     [cell setImage: imageURL];
     
