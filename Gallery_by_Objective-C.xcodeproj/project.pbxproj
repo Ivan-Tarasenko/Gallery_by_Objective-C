@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4DC3D92AF14BD5000F6254 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4DC3D82AF14BD5000F6254 /* Photos.framework */; };
 		1A51128B2ADB8282009AD86A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51128A2ADB8282009AD86A /* AppDelegate.m */; };
 		1A51128E2ADB8282009AD86A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A51128D2ADB8282009AD86A /* SceneDelegate.m */; };
 		1A5112912ADB8282009AD86A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5112902ADB8282009AD86A /* MainViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A4DC3D82AF14BD5000F6254 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		1A5112862ADB8282009AD86A /* Gallery_by_Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gallery_by_Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5112892ADB8282009AD86A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A51128A2ADB8282009AD86A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5112F92ADC20D3009AD86A /* SDWebImageMapKit in Frameworks */,
+				1A4DC3D92AF14BD5000F6254 /* Photos.framework in Frameworks */,
 				1A5112F72ADC20D3009AD86A /* SDWebImage in Frameworks */,
 				1A5113042AE014B8009AD86A /* AFNetworking in Frameworks */,
 			);
@@ -70,11 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A4DC3D72AF14BD5000F6254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A4DC3D82AF14BD5000F6254 /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1A51127D2ADB8282009AD86A = {
 			isa = PBXGroup;
 			children = (
 				1A5112882ADB8282009AD86A /* Gallery_by_Objective-C */,
 				1A5112872ADB8282009AD86A /* Products */,
+				1A4DC3D72AF14BD5000F6254 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
