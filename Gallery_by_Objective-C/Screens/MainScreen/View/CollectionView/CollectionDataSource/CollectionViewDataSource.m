@@ -18,15 +18,22 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.webImagesURL.count;
+    if (self.webImagesURL.count != 0) {
+        return self.webImagesURL.count;
+    } else {
+        return 20;
+    }
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCell" forIndexPath:indexPath];
     
-    NSString *imageURL = self.webImagesURL[indexPath.row];
-    
-    [cell setImage: imageURL];
+    if (self.webImagesURL.count != 0) {
+        NSString *imageURL = self.webImagesURL[indexPath.row];
+        [cell setImage: imageURL];
+    } else {
+        [cell setImage: @"https://"];
+    }
     
     return cell;
 }
