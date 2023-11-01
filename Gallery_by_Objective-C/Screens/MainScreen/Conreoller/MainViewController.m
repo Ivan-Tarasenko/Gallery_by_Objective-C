@@ -22,6 +22,8 @@
     [self initializingObjects];
     [self setupDelegates];
     [self setupCollectionView];
+    [self setupSearchBar];
+    [self setupRefreshControl];
     
     [self fetchData];
     
@@ -42,9 +44,12 @@
     self.layout = [[CollectionViewFlowLayout alloc] init];
     self.collectionView = [[CollectionView alloc] init];
     self.viewModel = [[MainViewModel alloc] init];
+    self.searchController = [[UISearchController alloc] init];
+    self.refresh = [[UIRefreshControl alloc] init];
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleLarge];
     
     self.largeImages = [NSMutableArray array];
+    self.isLoadData = NO;
 }
 
 - (void)fetchData {
@@ -56,6 +61,7 @@
             
             [self.collectionView reloadData];
             [self stopActivityIndicator];
+            self.isLoadData = YES;
         } else {
             NSLog(@"Ошибка при загрузке данных: %@", error.localizedDescription);
         }
@@ -70,9 +76,11 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         if (strongSelf) {
-            DetailViewController *detailVC = [[DetailViewController alloc] init];
-            detailVC.largeImageURL = strongSelf.largeImages[indexPath.row];
-            [strongSelf.navigationController pushViewController:detailVC animated:YES];
+            if (strongSelf.largeImages.count != 0) {
+                DetailViewController *detailVC = [[DetailViewController alloc] init];
+                detailVC.largeImageURL = strongSelf.largeImages[indexPath.row];
+                [strongSelf.navigationController pushViewController:detailVC animated:YES];
+            }
         }
     };
 }
@@ -113,5 +121,39 @@
     [self.collectionView addSubview:self.activityIndicator];
 }
 
+- (void)setupRefreshControl {
+    [self.refresh addTarget:self action:@selector(refreshCollection) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refresh];
+}
+
+- (void)setupSearchBar {
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.searchBar.placeholder = @"Search...";
+    self.navigationItem.searchController = self.searchController;
+}
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    if (![searchController.searchBar.text isEqual: @""]) {
+        self.topic = searchController.searchBar.text;
+        [self updateData];
+    }
+}
+
+- (void)updateData {
+    [self.dataSource.webImagesURL removeAllObjects];
+    [self.largeImages removeAllObjects];
+    [self fetchData];
+    [self.collectionView reloadData];
+    
+}
+
+// Refresh action
+- (void)refreshCollection {
+    [self updateData];
+    
+    if (self.isLoadData) {
+        [self.refresh endRefreshing];
+    }
+}
 
 @end
