@@ -63,6 +63,7 @@
             [self stopActivityIndicator];
             self.isLoadData = YES;
         } else {
+            [self showAlert];
             NSLog(@"Ошибка при загрузке данных: %@", error.localizedDescription);
         }
     }];
@@ -154,6 +155,20 @@
     if (self.isLoadData) {
         [self.refresh endRefreshing];
     }
+}
+
+// Alert
+- (void)showAlert {
+    NSString *title = @"Внимание";
+    NSString *message = @"Произошла ошибка загрузки данных. Пожалуйтса, проверьте подключение к интернету";
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle: title message: message preferredStyle: UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

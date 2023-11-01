@@ -98,7 +98,6 @@
 
 - (void)tapShared {
     [self sharedPhoto];
-    NSLog(@"share");
 }
 
 // MARK: Save photo
@@ -120,9 +119,11 @@
 - (void)sharedPhoto {
     UIImage *largeImage = self.largeImage.image;
     
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[largeImage] applicationActivities:nil];
-    
-    [self presentViewController:activityViewController animated:YES completion:nil];
+    if (largeImage) {
+        UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[largeImage] applicationActivities:nil];
+        
+        [self presentViewController:activityViewController animated:YES completion:nil];
+    }
 }
 
 @end

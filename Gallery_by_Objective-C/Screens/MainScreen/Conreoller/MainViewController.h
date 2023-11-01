@@ -43,6 +43,7 @@
 - (void)setupSearchBar;
 - (void)refreshCollection;
 - (void)updateData;
+- (void)showAlert;
 
 @end
 
