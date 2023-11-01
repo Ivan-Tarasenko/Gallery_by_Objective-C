@@ -6,7 +6,6 @@
 //
 
 #import "CollectionViewCell.h"
-#import <SDWebImage/SDWebImage.h>
 
 @implementation CollectionViewCell
 

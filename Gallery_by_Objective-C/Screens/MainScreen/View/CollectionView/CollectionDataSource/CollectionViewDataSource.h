@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CollectionViewDataSource : NSObject
 <UICollectionViewDataSource>
 
+@property (strong, nonatomic) NSMutableArray *webImagesURL;
+
 @end
 
 NS_ASSUME_NONNULL_END
