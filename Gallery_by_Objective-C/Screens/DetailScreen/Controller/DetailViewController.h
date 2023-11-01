@@ -12,16 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailViewController : UIViewController
 
+@property (strong, nonatomic) UIBarButtonItem * save;
+@property (strong, nonatomic) UIBarButtonItem * shared;
 @property (strong, nonatomic) UIActivityIndicatorView * activityIndicator;
-@property (strong, nonatomic) UIImageView *largeImage;
-@property (strong, nonatomic) NSString *largeImageURL;
+@property (strong, nonatomic) UIImageView * largeImage;
+@property (strong, nonatomic) NSString * largeImageURL;
 
 - (void)initializingObjects;
+- (void)setupView;
 - (void)setupImageView;
 - (void)setImage;
 - (void)setupActivityIndicator;
 - (void)stopActivityIndicator;
 - (void)checkCachImage;
+- (void)tapSave;
 
 @end
 
