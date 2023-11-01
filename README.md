@@ -8,7 +8,7 @@
 </div>
 
 <p align="center">
-<img src="/Preview/image.png" width="806" height="651"/>
+<img src="/Preview/image.png" width="736" height="651"/>
 </p>
 
 ## Description
@@ -30,7 +30,7 @@ made by Ivan Tarasenko
 **telegram (@Ivan_iOS_Developer)**
 
 ## stack
-Objective-C
+Objective-C  
 UIKit    
 AFNetworking  
 SDWebImage  
