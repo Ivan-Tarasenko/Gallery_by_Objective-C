@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopActivityIndicator;
 - (void)checkCachImage;
 - (void)tapSave;
+- (void)tapShared;
+- (void)sharedPhoto;
 
 @end
 
