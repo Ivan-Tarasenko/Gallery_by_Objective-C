@@ -8,7 +8,7 @@
 </div>
 
 <p align="center">
-<img src="/Preview/image.png" width="736" height="651"/>
+<img src="/Preview/image.png"/>
 </p>
 
 ## Description
